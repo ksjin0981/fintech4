@@ -7,4 +7,7 @@ data/
 build/
 dist/
 *.spec
-.exe
+*.exe
+models/
+utils/
+*.pkl
