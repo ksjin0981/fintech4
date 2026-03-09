@@ -185,6 +185,11 @@ select title from film where film_id
 in (select film_id from film_category 
 	where category_id in (select category_id from category where name in ('Comedy', 'Action')));
 
+select f.title from film f where f.film_id 
+in (select fc.film_id from film_category fc
+	where fc.category_id in (select c.category_id from category c where name in ('Comedy', 'Action')));
 
-
-
+select fc.film_id, f.title, c.name from film f
+inner join film_category fc on f.film_id = fc.film_id
+inner join category c on fc.category_id = c.category_id
+where c.name in ('Comedy', 'Action');
