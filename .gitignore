@@ -12,3 +12,5 @@ models/
 utils/
 *.pkl
 *.keras
+*.gemini_env
+.*env
